@@ -1,0 +1,15 @@
+﻿<Window x:Class="tutorial4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Todo Tutorial 4" Height="419" Width="443">
+    <DockPanel Margin="10">
+        <DockPanel Height="23" VerticalAlignment="Top" DockPanel.Dock="Bottom" Margin="0,10,0,0">
+            <Button x:Name="SyncButton" Content="Sync" DockPanel.Dock="Right" Click="SyncButton_Click"/>
+        </DockPanel>
+        <DockPanel Height="23" VerticalAlignment="Top" DockPanel.Dock="Bottom" Margin="0,10,0,0">
+            <Button x:Name="AddButton" Content="Add" VerticalAlignment="Top" Width="75" Margin="10,0,0,0" HorizontalAlignment="Right" DockPanel.Dock="Right" Click="AddButton_Click"/>
+            <TextBox x:Name="TodoTextBox" Height="23" Margin="0" TextWrapping="Wrap" VerticalAlignment="Top" />
+        </DockPanel>
+        <ListBox x:Name="TodoListBox" Margin="0" DockPanel.Dock="Top" KeyDown="TodoListBox_KeyDown" ItemsSource="{Binding TodoTexts}"/>
+    </DockPanel>
+</Window>
